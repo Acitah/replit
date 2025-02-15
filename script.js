@@ -11,4 +11,5 @@ let beer = document.querySelector('.bee');
 
 menu.onclick =()=>{
     beer.classList.toggle('bee');
+    
 }

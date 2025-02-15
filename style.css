@@ -183,25 +183,38 @@ nav img{
     margin: 0;
     height: 90px;
 }
-nav ul,
-.bee ul{
+nav ul{
     display: flex;
 }
-nav ul li,
-.bee ul li{
+nav ul li{
     margin: 10px;
     list-style: none;
     
 }
-nav ul li a,
-.bee ul li a{
+nav ul li a{
     flex: left;
     text-decoration: none;
    
 }
+/* .bee{
+    display: block;
+    height: auto;
+    background-color: aqua;
+    width: 150px;
+    float: right;
+    /* right: -100%;  
+        
+    }
+.bee .drop-down-content{
+        display: none;
+    }
+.bee .nav-items{
+        display: block;
+        text-align: left;
+    }  */
 .bee{
     display: none;
-}
+} 
 
 
 /* This caters for screens less than 1000px */
@@ -217,22 +230,8 @@ nav ul li a,
     .shrink{
         display: none;
     }
-    .bee{
-        display: block;
-        height: auto;
-        background-color: aqua;
-        width: 150px;
-        float: right;
-        /* right: -100%; */
-        
-    }
-    .bee .drop-down-content{
-        display: none;
-    }
-    .bee .nav-items{
-        display: block;
-        text-align: left;
-    }
+
+   
 }  
 .colabo{
     display: flex;
@@ -279,7 +278,8 @@ nav ul li a,
     text-align: center;
 }
 .feed{
-    height: 800px;
+    min-height: 800px;
+    padding: 20px 0px ;
     display: block;
     text-align: center;
     align-content: center;
@@ -290,24 +290,33 @@ nav ul li a,
     margin-bottom: 10px;
 }
 .grid{
-    height: 550px;
+    /* height: 550px; */
     display: grid;
-    grid-template-columns: 0.25fr 0.25fr 0.25fr;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 0.25fr));
     justify-content: center;
-    margin: 20px;
+     margin: 30px; 
     align-content: center;
     
 }
+@media sreen and (max-width:600px){
+    .feed{
+        padding-top: 70px, 0px;
+    }
+    .text{
+        margin-top: 20px;
+    }
+}
 .grid.column{
-    height: 200px;
-    width:200px ; 
+    height: 200px; 
+    width:400px ; 
     object-fit: cover;
     
     border-radius: 25px;
     border-style: groove;
 
 }
- @media screen and (max-width:600px) {
+ /* @media screen and (max-width:600px) {
     .feed{
         display: flex;
         
@@ -319,13 +328,14 @@ nav ul li a,
     } 
     /* .feed .column{
         width: 30%;
-    } */
-} 
+    } 
+}  */
+
 /*satff section*/
 .staff{
     background-color: orangered;
     padding: 50px;
-    height: 700px;
+    /* height: 700px; */
     box-shadow:  0px 0px 40px 40px orangered;
     display: block;
     text-align: center;
@@ -347,12 +357,13 @@ nav ul li a,
 
 .col{
     display: grid;
-    grid-template-columns: auto auto;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 3fr));
     margin-top: 20px;
 }
 .person{
     
-    width: 90%;
+    /* width: 90%; */
     display: flex;
     text-align: center;
     align-items: center;
@@ -364,11 +375,11 @@ nav ul li a,
     height: 100%;
     
     object-fit: fill;
-    width: 40%;
+    /* width: 40%; */
     border-radius: 20px;
 }
 .profile{
-    width: 60%;
+    /* width: 60%; */
     padding: 5px;
 }
 .footer{
